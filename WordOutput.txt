@@ -1,0 +1,40 @@
+    public void MarkDominationDeep() {
+        Queue<NormalBlock> DeepBlocks = new LinkedList<>();
+        DeepBlocks.add(controlFlowGraph.EntryBlock);
+        DominationDeep.put(controlFlowGraph.EntryBlock,0);
+        while(!DeepBlocks.isEmpty()) {
+            NormalBlock analyzeBlock = DeepBlocks.poll();
+            VisitOrder.add(analyzeBlock);
+            int NowDeep = DominationDeep.get(analyzeBlock);
+            HashSet<NormalBlock> Dom = getBlockDirectDomWhichBlock(analyzeBlock);
+            Dom.forEach(normalBlock -> DominationDeep.put(normalBlock,NowDeep + 1));
+            DeepBlocks.addAll(Dom);
+        }
+        searchEndBlock();
+    }
+
+    public HashSet<NormalBlock> getBlockDirectDomWhichBlock(NormalBlock normalBlock) {
+        HashSet<NormalBlock> DirectDom = new HashSet<>();
+        ssaConvert.DirectDomination.forEach((BeDomBlock, DomBlock) -> {
+            if (DomBlock == normalBlock) {
+                DirectDom.add(BeDomBlock);
+            }
+        });
+        return DirectDom;
+    }
+
+
+    public void MarkDominationDeep() {
+        Queue<NormalBlock> DeepBlocks = new LinkedList<>();
+        DeepBlocks.add(controlFlowGraph.EntryBlock);
+        DominationDeep.put(controlFlowGraph.EntryBlock,0);
+        while(!DeepBlocks.isEmpty()) {
+            NormalBlock analyzeBlock = DeepBlocks.poll();
+            VisitOrder.add(analyzeBlock);
+            int NowDeep = DominationDeep.get(analyzeBlock);
+            HashSet<NormalBlock> Dom = ssaConvert.StrictDomination.getOrDefault(analyzeBlock,new HashSet<>());
+            Dom.forEach(normalBlock -> DominationDeep.put(normalBlock,NowDeep + 1));
+            DeepBlocks.addAll(Dom);
+        }
+        searchEndBlock();
+    }

@@ -1,0 +1,103 @@
+GlobalBlock:
+	Add Temp_0 Const_5 Const_0
+	Add Global_0_0 Temp_0 Const_0
+	Add Temp_1 Const_3 Const_0
+	Add Global_1_0 Temp_1 Const_0
+	Add Temp_2 Const_0 Const_0
+	Add Global_2_0 Temp_2 Const_0
+	Add Temp_3 Const_6 Const_0
+	Add Global_3_0 Temp_3 Const_0
+	Alloc Global_4_0 (Const_5)
+	Add Temp_4 Global_4_0 Const_0
+	Store Const_5 (Temp_4)
+	Add Temp_5 Temp_4 Const_4
+	Store Const_3 (Temp_5)
+	Add Temp_6 Temp_5 Const_4
+	Store Const_3 (Temp_6)
+	Add Temp_7 Temp_6 Const_4
+	Store Const_4 (Temp_7)
+	Add Temp_8 Temp_7 Const_4
+	Store Const_0 (Temp_8)
+	Alloc Global_5_0 (Const_3)
+	Add Temp_9 Global_5_0 Const_0
+	Store Const_0 (Temp_9)
+	Add Temp_10 Temp_9 Const_4
+	Store Const_0 (Temp_10)
+	Add Temp_11 Temp_10 Const_4
+	Store Const_2 (Temp_11)
+	Alloc Global_6_0 (Const_4)
+	Add Temp_12 Global_6_0 Const_0
+	Store Const_0 (Temp_12)
+	Add Temp_13 Temp_12 Const_4
+	Store Const_0 (Temp_13)
+	Add Temp_14 Temp_13 Const_4
+	Store Const_3 (Temp_14)
+	Add Temp_15 Temp_14 Const_4
+	Store Const_9 (Temp_15)
+	Alloc Global_7_0 (Const_2)
+	Add Temp_16 Global_7_0 Const_0
+	Store Const_7 (Temp_16)
+	Add Temp_17 Temp_16 Const_4
+	Store Const_9 (Temp_17)
+	Alloc Global_8_0 (Const_3)
+	Add Temp_18 Global_8_0 Const_0
+	Store Const_1 (Temp_18)
+	Add Temp_19 Temp_18 Const_4
+	Store Const_2 (Temp_19)
+	Add Temp_20 Temp_19 Const_4
+	Store Const_3 (Temp_20)
+	Alloc Global_9_0 (Const_1)
+	Add Temp_21 Global_9_0 Const_0
+	Store Const_-78549321 (Temp_21)
+	Alloc Global_10_0 (Const_6)
+	Add Temp_22 Global_10_0 Const_0
+	Store Const_8 (Temp_22)
+	Add Temp_23 Temp_22 Const_4
+	Store Const_0 (Temp_23)
+	Add Temp_24 Temp_23 Const_4
+	Store Const_3 (Temp_24)
+	Add Temp_25 Temp_24 Const_4
+	Store Const_9 (Temp_25)
+	Add Temp_26 Temp_25 Const_4
+	Store Const_1 (Temp_26)
+	Add Temp_27 Temp_26 Const_4
+	Store Const_9 (Temp_27)
+
+main_func:
+	PutStr Const_0
+	Add Temp_28 Const_0 Const_0
+	Add Temp_29 Temp_28 Const_0
+	Add Variable_0_0 Temp_29 Const_0
+	Add Temp_30 Const_0 Const_0
+	Add Temp_31 Temp_30 Const_0
+	Add Variable_1_0 Temp_31 Const_0
+	Add Temp_32 Const_0 Const_0
+	Seq Temp_33 Variable_0_0 Temp_32
+	beqz Temp_33 if_entrance_0 else_entrance_2
+	Tag if_entrance_0
+	Add Temp_34 Variable_0_0 Const_0
+	Add Temp_36 Const_1 Const_0
+	Add Temp_35 Temp_36 Const_0
+	Add Temp_37 Temp_34 Temp_35
+	Add Variable_0_1 Temp_37 Const_0
+	Add Temp_38 Variable_1_0 Const_0
+	Add Temp_40 Const_1 Const_0
+	Add Temp_39 Temp_40 Const_0
+	Add Temp_41 Temp_38 Temp_39
+	Add Variable_1_1 Temp_41 Const_0
+	PutStr Const_1
+	Tag if_exit_1
+	Jump else_exit_3
+	Tag else_entrance_2
+	Add Temp_42 Variable_0_0 Const_0
+	Add Temp_44 Const_1 Const_0
+	Add Temp_43 Temp_44 Const_0
+	Add Temp_45 Temp_42 Temp_43
+	Add Variable_0_2 Temp_45 Const_0
+	PutStr Const_2
+	Tag else_exit_3
+	PutNumber Variable_0_3
+	PutStr Const_3
+	Add Temp_46 Const_0 Const_0
+	Return Temp_46
+
