@@ -1,6 +1,6 @@
 # BUAA-2023-Compiler
 
-竞速综合排名第六，设计参考于 Yu Ge Compiler
+一个可用的MIPS编译器，竞速综合排名第六，设计参考于 Yu Ge Compiler
 
 ## 基础功能
 
